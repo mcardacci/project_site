@@ -1,14 +1,23 @@
 
-function hide(elem) {
-	elem.className += " hide";
+var domReady = function(callback) {
+    document.readyState === "interactive" || document.readyState === "complete" ? callback() : document.addEventListener("DOMContentLoaded", callback);
+};
+function moveRight(elem) {
+	elem.className += " move-right";
 };
 
 
-document.addEventListener("DOMContentLoaded", function() {
-
+// document.addEventListener("DOMContentLoaded", function() {
+domReady(function() {
 
 	var portfolio = document.getElementById("portfolio-nav");
-	portfolio.addEventListener("click", hide(portfolio));
+	var navWrapper = document.getElementById("nav-wrapper");
 
+	portfolio.addEventListener("click", function() {
+		moveRight(navWrapper);
+	});
 
 });
+
+
+// });
