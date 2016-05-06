@@ -13,13 +13,13 @@ function moveLeft(elem) {
 
 domReady(function() {
 
-	var portfolio = document.getElementById("portfolio-nav");
+	var portfolioNav = document.getElementById("portfolio-nav");
+	var contactNav = document.getElementById("contact-wrapper");
 	var navWrapper = document.getElementById("nav-wrapper");
 	var portfolioWrapper = document.getElementById("portfolio-wrapper");
-
 	var homeBtn = document.getElementById("home-btn");
 
-	portfolio.addEventListener("click", function() {
+	portfolioNav.addEventListener("click", function() {
 		portfolioWrapper.className="";
 		navWrapper.className="";
 		moveRight(navWrapper);
@@ -33,5 +33,11 @@ domReady(function() {
 		moveLeft(portfolioWrapper);
 		moveLeft(navWrapper);
 	});
+
+	contactNav.addEventListener("click", function() {
+		portfolio.wrapper.className = "";
+		navWrapper.className = "";
+	});
+
 
 });
