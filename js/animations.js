@@ -17,7 +17,7 @@ domReady(function() {
 	var navWrapper = document.getElementById("nav-wrapper");
 	var portfolioWrapper = document.getElementById("portfolio-wrapper");
 
-	var test = document.getElementById("project-one");
+	var homeBtn = document.getElementById("home-btn");
 
 	portfolio.addEventListener("click", function() {
 		portfolioWrapper.className="";
@@ -27,7 +27,7 @@ domReady(function() {
 
 	});
 
-	test.addEventListener("click", function() {
+	homeBtn.addEventListener("click", function() {
 		portfolioWrapper.className="";
 		navWrapper.className="";
 		moveLeft(portfolioWrapper);
