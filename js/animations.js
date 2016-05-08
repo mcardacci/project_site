@@ -4,40 +4,47 @@ var domReady = function(callback) {
 };
 
 function moveRight(elem) {
-	elem.className += " move-right";
+	elem.className = " move-right";
 };
 
 function moveLeft(elem) {
-	elem.className += " move-left";
+	elem.className = " move-left";
+};
+
+function moveToContactPage(elem) {
+	elem.className = " move-left-to-contact"
 };
 
 domReady(function() {
-
 	var portfolioNav = document.getElementById("portfolio-nav");
-	var contactNav = document.getElementById("contact-wrapper");
+	var contactNav = document.getElementById("contact-nav");
 	var navWrapper = document.getElementById("nav-wrapper");
 	var portfolioWrapper = document.getElementById("portfolio-wrapper");
+	var contactWrapper = document.getElementById("contact-wrapper");
 	var homeBtn = document.getElementById("home-btn");
+	var homeBtnContactsPage = document.getElementById("home-btn-contacts");
 
 	portfolioNav.addEventListener("click", function() {
-		portfolioWrapper.className="";
-		navWrapper.className="";
 		moveRight(navWrapper);
 		moveRight(portfolioWrapper);
-
+		moveRight(contactWrapper);
 	});
 
 	homeBtn.addEventListener("click", function() {
-		portfolioWrapper.className="";
-		navWrapper.className="";
 		moveLeft(portfolioWrapper);
 		moveLeft(navWrapper);
+		moveLeft(contactWrapper);	
 	});
 
 	contactNav.addEventListener("click", function() {
-		portfolio.wrapper.className = "";
-		navWrapper.className = "";
+		moveToContactPage(portfolioWrapper);
+		moveToContactPage(navWrapper);
+		moveToContactPage(contactWrapper);	
 	});
 
-
+	homeBtnContactsPage.addEventListener("click", function() {
+		moveLeft(portfolioWrapper);
+		moveLeft(navWrapper);
+		moveLeft(contactWrapper);		
+	});
 });
