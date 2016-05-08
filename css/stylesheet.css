@@ -3,16 +3,31 @@
 	padding: 0;
 }
 
+body {
+	overflow-x: hidden;
+}
+
+.container {
+	/*overflow-x: hidden;*/
+}
+
 /*home navigation*/
 #nav-wrapper {
 	height: 100%;
 	width: 100%;
+	/*overflow-x: hidden;*/
 	overflow: hidden;
 	text-align: center;
 	position:absolute;
 	border: 2px solid black;
+	display: table;
 	-webkit-transition: transform 1s; /* For Safari 3.1 to 6.0 */
     transition: transform 1s;
+}
+
+#portfolio-nav,#about-nav,#contact-nav{
+	display: table-cell;
+	vertical-align: middle;
 }
 
 #about-nav {
@@ -45,6 +60,8 @@
 /*portfolio screen (from the left)*/
 #portfolio-wrapper {
 	position:absolute;
+	/*display: flex;*/
+	/*justify-content: space-between;*/
 	text-align: center;
 	border: 2px solid orange;
 	height: 100%;
@@ -110,43 +127,76 @@
 /*CONTACT PAGE (FROM RIGHT TO LEFT)*/
 #contact-wrapper {
 	/*z-index: 1000;*/
-	right:100%;
+	right:-100%;
 	height: 100%;
 	width: 100%;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	text-align: center;
 	position:absolute;
-	/*border: 2px solid red;*/
+	border: 2px solid red;
 	-webkit-transition: transform 1s; 
     transition: transform 1s;
 }
 
 #twitter-btn {
-	/*border: 2px solid green;*/
+	border: 2px solid green;
 	position: absolute;
-	top:37%;
-	left:0%;
+	top:30%;
+	left: 26%;
 	font-size:3em;
 }
 
 #github-btn {
-
+	border: 2px solid green;
+	position: absolute;
+	top:30%;
+	left: 35%;
+	font-size:3em;
 }
 
 #linkedIn-btn {
-
+	border: 2px solid green;
+	position: absolute;
+	top:30%;
+	left: 44%;
+	font-size:3em;
 }
 
 #email-btn {
+	border: 2px solid green;
+	position: absolute;
+	top:30%;
+	left: 53%;
+	font-size:3em;
+}
 
+#home-btn-contacts {
+	border: 2px solid blue;
+	position: absolute;
+	top:12%;
+	left: 24%;
+	background: url(../img/home_icn.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 10vh;
+	height: 10vh;
+	margin-top: 1%;
+	margin-left: 1%;
 }
 
 /*animation classes*/
 
 .move-right {
 	transform:translateX(100%);
+	/*transform:translate3d(100%,0,0);*/
 }
 
 .move-left {
 	transform:translateX(0%);
+	/*transform:translate3d(0%,0,0);*/
+}
+
+.move-left-to-contact {
+	transform:translateX(-100%);
 }
