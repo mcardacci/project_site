@@ -15,9 +15,14 @@ function moveToContactPage(elem) {
 	elem.className = " move-left-to-contact"
 };
 
+function moveDown(elem) {
+	elem.className = " move-down"
+};
+
 domReady(function() {
 	var portfolioNav = document.getElementById("portfolio-nav");
 	var contactNav = document.getElementById("contact-nav");
+	var aboutNav = document.getElementById("about-nav");
 	var navWrapper = document.getElementById("nav-wrapper");
 	var portfolioWrapper = document.getElementById("portfolio-wrapper");
 	var contactWrapper = document.getElementById("contact-wrapper");
@@ -47,4 +52,11 @@ domReady(function() {
 		moveLeft(navWrapper);
 		moveLeft(contactWrapper);		
 	});
+
+	aboutNav.addEventListener("click", function() {
+		moveDown(portfolioWrapper);
+		moveDown(navWrapper);
+		moveDown(contactWrapper);		
+	});
+
 });
