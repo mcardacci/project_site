@@ -26,6 +26,7 @@ domReady(function() {
 	var navWrapper = document.getElementById("nav-wrapper");
 	var portfolioWrapper = document.getElementById("portfolio-wrapper");
 	var contactWrapper = document.getElementById("contact-wrapper");
+	var aboutWrapper = document.getElementById("about-wrapper");
 	var homeBtn = document.getElementById("home-btn");
 	var homeBtnContactsPage = document.getElementById("home-btn-contacts");
 
@@ -56,7 +57,8 @@ domReady(function() {
 	aboutNav.addEventListener("click", function() {
 		moveDown(portfolioWrapper);
 		moveDown(navWrapper);
-		moveDown(contactWrapper);		
+		moveDown(contactWrapper);
+		moveDown(aboutWrapper);
 	});
 
 });
