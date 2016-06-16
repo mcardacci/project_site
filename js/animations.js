@@ -19,6 +19,10 @@ function moveDown(elem) {
 	elem.className = " move-down"
 };
 
+function moveUp(elem) {
+        elem.className = " move-up";    
+};
+
 domReady(function() {
 	var portfolioNav = document.getElementById("portfolio-nav");
 	var contactNav = document.getElementById("contact-nav");
@@ -29,6 +33,7 @@ domReady(function() {
 	var aboutWrapper = document.getElementById("about-wrapper");
 	var homeBtn = document.getElementById("home-btn");
 	var homeBtnContactsPage = document.getElementById("home-btn-contacts");
+        var homeBtnAboutPage = document.getElementById("home-btn-about");
 
 	portfolioNav.addEventListener("click", function() {
 		moveRight(navWrapper);
@@ -60,5 +65,12 @@ domReady(function() {
 		moveDown(contactWrapper);
 		moveDown(aboutWrapper);
 	});
+
+        homeBtnAboutPage.addEventListener("click", function() {
+                moveUp(portfolioWrapper);
+                moveUp(navWrapper);
+                moveUp(contactWrapper);
+                moveUp(aboutWrapper);
+        });        
 
 });
