@@ -196,6 +196,22 @@ body {
     transition: transform 1s;
 }
 
+#home-btn-about {
+    border: 2px solid blue;
+    position:absolute;
+    top:12%;
+    left:11%;
+    background: url(../img/home_icn.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10vh;
+    height: 10vh;
+    margin-top: 1%;
+    margin-left: 1%;
+
+}
+
 #about-wrapper.move-down{
 	transform: translateY(-100%);
 
@@ -230,4 +246,8 @@ body {
 .move-down {
 	transform: translateY(-100%);
 	/*background-color: red;*/
+}
+
+.move-up {
+    transform: translateY(0%);        
 }
