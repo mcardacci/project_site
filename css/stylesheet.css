@@ -58,12 +58,24 @@ body {
 }
 
 /*--------------------------portfolio screen (from the left)----------------------*/
+.project {
+    -webkit-transition: 1s;
+    -moz-transition:    1s;
+    -ms-transition:     1s;
+    -o-transition:      1s;
+    transition:         1s;
+}
+
+.project:hover {
+    background-color: #0074D9;
+}
+
 #portfolio-wrapper {
 	position:absolute;
 	/*display: flex;*/
 	/*justify-content: space-between;*/
 	text-align: center;
-	border: 2px solid orange;
+/*	border: 2px solid orange;*/
 	height: 100%;
 	width: 100%;
 	-webkit-transition: transform 1s;
@@ -73,8 +85,9 @@ body {
 #project-one {
 	/*border: 2px solid green;*/
 	position: absolute;
+        display: block;
 	top:25%;
-	left:-70%;
+	left:-60%;
 	font-size:3em;
 }
 
