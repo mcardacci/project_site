@@ -1,11 +1,51 @@
+/*-------------------FONTS---------------------------------------------*/
+
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans');*/
+
+@font-face {
+    font-family: xolonium_bold;
+    src: url(../fonts/Xolonium-Bold.otf);
+}
+/*=====================================================================*/
+html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre {
+    margin-bottom: 1em;
+}
+
+a:hover {
+    color:blue;
+    cursor: url('../img/cur1.ani'), url('../img/cur1.png'), progress !important;
+}
+
 a {
     color: green;
     text-decoration: none;
 }
 
-a:hover {
-    color:blue;
-    cursor:pointer;
+p {
+    color: #555;
 }
 
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+}
 
+.project-title {
+    font-family: xolonium_bold;   
+    font-size: 1.3em;
+}
+
+.test {
+    font-family: 'Open Sans';
+}
