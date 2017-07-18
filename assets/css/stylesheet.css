@@ -14,7 +14,7 @@ a {
 }
 
 a:hover {
-    color:black; 
+    color: white; 
     text-decoration:none; 
     cursor:pointer;  
 }
@@ -83,10 +83,11 @@ a:hover {
 
 #portfolio-wrapper {
 	position:absolute;
+        left:-100%;
 	/*display: flex;*/
 	/*justify-content: space-between;*/
 	text-align: center;
-/*	border: 2px solid orange;*/
+	border: 2px solid orange;
 	height: 100%;
 	width: 100%;
 	-webkit-transition: transform 1s;
@@ -94,27 +95,28 @@ a:hover {
 }
 
 #project-one {
-	/*border: 2px solid green;*/
+        padding: .5em 14em .5em 14em;
 	position: absolute;
-        display: block;
+        /*display: block;*/
 	top:25%;
-	left:-60%;
+	/*left:-10%;*/
 	font-size:3em;
 }
 
 #project-two {
 	/*border: 2px solid blue;*/
+        /*display: block;*/
 	position: absolute;
-	top:25%;
-	left:-55%;
+	top:44%;
+	/*left:-64%;*/
 	font-size:3em;
 }
 
 #project-three {
 	/*border: 2px solid red;*/
 	position: absolute;
-	top:25%;
-	left:-40%;
+	top:35%;
+	left:-55%;
 	font-size:3em;
 }
 
